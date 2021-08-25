@@ -27,8 +27,6 @@
                             @endforeach
                         </select>
                     </div>
-                </div>
-                <div class="col-6">
                     <div class="form-group">
                         <label for="">Tác giả</label>
                         <span style="color: red">*</span>
@@ -44,6 +42,16 @@
                             accept="image/*">
                         @if ($errors->any())
                             <p style="color: red">{{ $errors->first('image') }}</p>
+                        @endif
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Mô tả</label>
+                        <span style="color: red">*</span>
+                        <textarea class="ckeditor form-control" name="publish" >{{ $stories->publish }}</textarea>
+                        @if ($errors->any())
+                            <p style="color: red"> {{ $errors->first('publish') }}</p>
                         @endif
                     </div>
                 </div>

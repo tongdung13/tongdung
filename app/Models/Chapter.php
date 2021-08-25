@@ -12,6 +12,7 @@ class Chapter extends Model
     protected $table = 'chapters';
 
     protected $fillable = [
+        'chap',
         'story_id',
         'chapter',
         'content',

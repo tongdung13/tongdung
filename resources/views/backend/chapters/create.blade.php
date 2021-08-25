@@ -27,6 +27,17 @@
                         <label for="">Tên chương</label>
                         <span style="color: red">*</span>
                         <input type="text" name="chapter" class="form-control" value="{{ old('chapter') }}">
+                        @if ($errors->any())
+                                <p style="color: red">{{ $errors->first('chapter') }}</p>
+                            @endif
+                    </div>
+                    <div class="form-group">
+                        <label for="">Chương</label>
+                        <span style="color: red">*</span>
+                        <input type="text" name="chap" class="form-control" value="{{ old('chap') }}">
+                        @if ($errors->any())
+                                <p style="color: red">{{ $errors->first('chap') }}</p>
+                            @endif
                     </div>
                 </div>
                 <div class="col-6">

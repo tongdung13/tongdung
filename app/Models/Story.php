@@ -15,6 +15,7 @@ class Story extends Model
         'story_name',
         'author',
         'image',
+        'publish',
     ];
 
     public function categories()

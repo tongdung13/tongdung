@@ -26,6 +26,7 @@ class ChapterRequest extends FormRequest
         return [
             'story_id' => 'required',
             'chapter' => 'required',
+            'chap' => 'required',
             'content' => 'required',
         ];
     }
@@ -35,6 +36,7 @@ class ChapterRequest extends FormRequest
         return [
             'story_id.required' => 'Vui lòng nhập tên truyện',
             'chapter.required' => 'Vui lòng nhập tên chương',
+            'chap.required' => 'Vui lòng nhập chương',
             'content.required' => 'Vui lòng nhập nội dung truyện',
         ];
     }
