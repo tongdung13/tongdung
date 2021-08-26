@@ -20,6 +20,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Danh mục</label>
+                        <span style="color: red">*</span>
                         <select name="category_id[]" class="form-control select2" multiple id="">
                             @foreach ($categories as $item)
                                 <option value="{{ $item->id }}">{{ $item->category_name }}</option>
@@ -32,6 +33,19 @@
                         <input type="text" name="author" class="form-control" value="{{ old('author') }}" id="">
                         @if ($errors->any())
                             <p style="color: red">{{ $errors->first('author') }}</p>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label for="">Trạng thái</label>
+                        <span style="color: red">*</span>
+                        <select name="status" class="form-control">
+                            <option value="">Trạng thái</option>
+                            <option value="Hoàn thành">Hoàn thành</option>
+                            <option value="Chưa hoàn thành">Chưa hoàn thành</option>
+                            <option value="Truyện mới">Truyện mới</option>
+                        </select>
+                        @if ($errors->any())
+                            <p style="color: red">{{ $errors->first('status') }}</p>
                         @endif
                     </div>
                     <div class="form-group">

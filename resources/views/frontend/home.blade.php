@@ -22,7 +22,8 @@
                 <table class="table">
                     @foreach ($stories as $story)
                         <tr>
-                            <td>{{ $story->story_name . ' new' }}</td>
+                            <td>
+                                <a href="{{ route('showStory', $story->id) }}">{{ $story->story_name . ' new' }}</a></td>
                             <td>
                                 @php
                                     $arr_cate = [];

@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>@yield('title')</title>
-    <link rel="icon" href="{{ asset('admin/img/2.jpg') }}" type="image/png">
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -16,14 +14,14 @@
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/4.6/assets/img/favicons/apple-touch-icon.png"
         sizes="180x180">
-    <link rel="icon" href="https://getbootstrap.com/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+    {{-- <link rel="icon" href="https://getbootstrap.com/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32"
         type="image/png">
     <link rel="icon" href="https://getbootstrap.com/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16"
-        type="image/png">
+        type="image/png"> --}}
     <link rel="manifest" href="https://getbootstrap.com/docs/4.6/assets/img/favicons/manifest.json">
     <link rel="mask-icon" href="https://getbootstrap.com/docs/4.6/assets/img/favicons/safari-pinned-tab.svg"
         color="#563d7c">
-    <link rel="icon" href="https://getbootstrap.com/docs/4.6/assets/img/favicons/favicon.ico">
+    {{-- <link rel="icon" href="https://getbootstrap.com/docs/4.6/assets/img/favicons/favicon.ico"> --}}
     <meta name="msapplication-config" content="https://getbootstrap.com/docs/4.6/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
     <style>
@@ -53,7 +51,7 @@
             <div class="container">
                 <div>
                     <a href="">
-                        <h3 style="color: aliceblue">Truyện Hay</h3>
+                        <h4 style="color: aliceblue">Truyện Hay</h4>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 10px">
@@ -114,6 +112,10 @@
         </a>
     </div>
     @yield('content')
+    <hr>
+    <footer style="color: aquamarine">
+        <a href="" style="margin-left: 50%">truyen</a>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>

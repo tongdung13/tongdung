@@ -6,6 +6,7 @@ use App\Http\Requests\StoryRequest;
 use App\Models\Category;
 use App\Models\Story;
 use App\Models\StoryCategory;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class StoryController extends Controller
@@ -74,9 +75,9 @@ class StoryController extends Controller
         $stories->fill($StoryRequest->all());
 
         if ($StoryRequest->hasFile('image')) {
-            $imageCurrent = $StoryRequest->file('image');
-            if ($imageCurrent) {
-                Storage::delete('/images/' . $imageCurrent);
+            $getImage = DB::table('stories')->select('image')->where('id', $id)->get();
+            if ($getImage[0]->image != '' && file_exists(public_path('storage/images/' . $getImage[0]->image))) {
+                unlink(public_path('storage/images/' . $getImage[0]->image));
             }
 
             $image = $StoryRequest->file('image');

@@ -27,6 +27,7 @@ class StoryRequest extends FormRequest
             'story_name' => 'required',
             'author' => 'required',
             'publish' => 'required',
+            'status' => 'required',
         ];
     }
 
@@ -36,6 +37,7 @@ class StoryRequest extends FormRequest
             'story_name.required' => 'Vui lòng nhập tên truyện!',
             'author.required' => 'Vui lòng nhập tên tác giả!',
             'publish.required' => 'Vui lòng nhập mô tả!',
+            'status.required' => 'Vui lòng nhập trạng thái!',
         ];
     }
 }

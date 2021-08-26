@@ -63,6 +63,6 @@ Route::post('register', [AuthController::class, 'store'])->name('store');
 // frontend
 // home
 Route::get('/', [HomeController::class, 'story'])->name('home');
-
+Route::get('story/{id}', [HomeController::class, 'showStory'])->name('showStory');
 // nav
 Route::get('category', [NavController::class, 'category'])->name('category');

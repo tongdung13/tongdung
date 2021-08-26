@@ -36,6 +36,19 @@
                         @endif
                     </div>
                     <div class="form-group">
+                        <label for="">Trạng thái</label>
+                        <span style="color: red">*</span>
+                        <select name="status" class="form-control">
+                            <option value="{{ $stories->status }}">{{ $stories->status }}</option>
+                            <option value="Hoàn thành">Hoàn thành</option>
+                            <option value="Chưa hoàn thành">Chưa hoàn thành</option>
+                            <option value="Truyện mới">Truyện mới</option>
+                        </select>
+                        @if ($errors->any())
+                            <p style="color: red">{{ $errors->first('status') }}</p>
+                        @endif
+                    </div>
+                    <div class="form-group">
                         <label for="">Ảnh</label>
                         <span style="color: red">*</span>
                         <input type="file" name="image" class="form-control-file" value="{{ old('image') }}"

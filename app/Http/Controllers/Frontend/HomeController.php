@@ -16,4 +16,12 @@ class HomeController extends Controller
 
         return view('frontend.home', compact('stories', 'categories'));
     }
+
+    public function showStory($id)
+    {
+        $stories = Story::findOrFail($id);
+        $categories = Category::all();
+
+        return view('frontend.detailStory', compact('stories', 'categories'));
+    }
 }
